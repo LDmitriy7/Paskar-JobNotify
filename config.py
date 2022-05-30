@@ -4,6 +4,7 @@ import os
 BOT_TOKEN = os.environ['BOT_TOKEN']
 API_HASH = os.environ['API_HASH']
 API_ID = int(os.environ['API_ID'])
+DB_HOST = os.environ['DB_HOST']
 
 ADMINS = [364702722, 433120468, 450695029, 724477101]
 

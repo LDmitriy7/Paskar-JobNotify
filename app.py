@@ -9,7 +9,7 @@ from telethon.sync import TelegramClient, events
 
 import commands
 import config
-from config import API_HASH, API_ID
+from config import API_HASH, API_ID, DB_HOST
 
 
 def levenshtein_distance(first, second):
@@ -41,7 +41,7 @@ def percent_diff(first, second):
 
 
 # Database setup
-db_client = motor.motor_asyncio.AsyncIOMotorClient()
+db_client = motor.motor_asyncio.AsyncIOMotorClient(host=DB_HOST)
 db = db_client.job_notify_bot
 
 # {uid: 123456789, stage: int, p_stage: int,
