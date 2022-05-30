@@ -3,3 +3,10 @@ services:
     build: .
     env_file: .env
     restart: always
+  mongo:
+    image: mongo
+    restart: always
+    volumes:
+      - mongo:/data/db
+volumes:
+  mongo: null
